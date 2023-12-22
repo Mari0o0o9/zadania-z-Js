@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Adopcja zwierząt
+        </h1>
+    </header>
+    <section>
+        <article id="select-container">
+            <h2>Adopcja zwierząt do nas</h2>
+            <label for="imie">Imie zwierzaka:</label> <br>
+            <input type="text" id="imie"> <br>
+
+            <label for="animalType">Rodzaj zwierzaka:</label> <br>
+            <select id="animalType">
+                <option value="pies" id="pies">Pies</option>
+                <option value="kot" id="kot">Kot</option>
+                <option value="papuga" id="papuga">Papuga</option>
+                <option value="jaszczurka" id="jaszczurka">Jaszczurka</option>
+                <option value="zolw" id="zolw">Żółw</option>
+            </select> <br>
+            
+            <label for="gatunek" class="disable">Gatunek zwierzaka</label> <br>
+            <select id="gatunekPsa" class="disable">
+                <option value="buldog">buldog</option>
+                <option value="lablador">lablador</option>
+            </select>
+
+            <select id="gatunekJaszczurka" class="disable">
+                <option value="varan comodo">varan comodo</option>
+                <option value="gegon">gegon</option>
+            </select>
+
+            <select id="gatunekKot" class="disable">
+                <option value="szwedzki lesny">szwedzki lesny</option>
+                <option value="sfinks">sfinks</option>
+            </select>
+
+            <h2>i zajecia dla nich</h2>
+        </article>
+        <article>
+            <h2>zwierzeta do adopcji</h2>
+        </article>
+    </section>
+</body>
+<script src="./main.js"></script>
+</html>

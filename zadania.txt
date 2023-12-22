@@ -1,0 +1,19 @@
+01 System płatności (obojętny)
+ Utwórz jedno pole wejściowe dla nazwy, jednego przycisku i jednego tagu h3
+ który pokazuje tekst „Total: X” z HTML.  W twoim javascript
+ utwórz 2 obiekty: osobę 1 i osobę 2 z właściwościami: imię
+ i pieniądze.  jeden obiekt zwany koszykiem zawiera elementy właściwości i
+ ceny jako wartość.  Wyświetl całkowitą wartość i sprawdź, czy
+ osoba ma wystarczającą ilość pieniędzy, czy nie, i wyświetli komunikat
+ odpowiednio (Aby rzucić sobie wyzwanie, stwórz metodę pracy w
+ właściwości, które zwiększają ilość pieniędzy
+ za każdym razem, gdy jest uruchamiany.
+ co jest potrzebne: HTML, JavaScript [dom], warunki, obiekty
+ 
+ 02 Centrum Adopcji Zwierząt
+ Zaprojektuj system dla ośrodka adopcyjnego zwierząt domowych z zajęciami dla
+ zwierzęta i adopcyjni.  Użyj pętli, aby zarządzać wieloma zwierzętami
+ i adoptujących.  Użyj warunków, aby sprawdzić zgodność i
+ status adopcyjny.  (Użyj dziedziczenia, jeśli chcesz rzucić wyzwanie
+ jak utwórz klasę ptaka i spraw, aby klasa kurczaka ją rozszerzała)
+ co jest potrzebne: klasy, obiekty, pętle, warunki
