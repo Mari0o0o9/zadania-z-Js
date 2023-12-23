@@ -24,6 +24,9 @@ article {
 }
 
 input {
+    color: white;
+    text-align: right;
+    width: 15vw;
     background-color: #098baf;
     border-radius: 10px;
     border: none;
@@ -36,6 +39,8 @@ label {
     font-weight: bolder;
 }
 select {
+    color: white;
+    width: 15vw;
     background-color: #098baf;
     border-radius: 10px;
     border: none;
