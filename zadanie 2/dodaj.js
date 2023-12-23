@@ -51,4 +51,3 @@ function getDependencyArray(animalType) {
     return dependencyMap[animalType] || []
 }
 gatunek();
-
