@@ -16,8 +16,6 @@ function createSection(optionsArray) {
     var section = document.createElement('select')
     var label = document.createElement('label')
     
-
-
     for (let index = 0; index < optionsArray.length; index++) {
         var optionsElement = document.createElement('option')
         optionsElement.value = optionsArray[index]
