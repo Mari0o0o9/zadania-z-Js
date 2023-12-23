@@ -17,7 +17,7 @@ section {
 }
 article {
     background-color: #0d526f;
-    box-shadow: black;
+    box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
     padding: 0px 10px 5px 10px;
     border-radius: 10px;
     width: 45%;
@@ -26,7 +26,7 @@ article {
 input {
     color: white;
     text-align: right;
-    width: 15vw;
+    width: 300px;
     background-color: #098baf;
     border-radius: 10px;
     border: none;
@@ -34,13 +34,18 @@ input {
     padding: 5px;
     font-size: 15px;
     font-weight: bold;
+}
+input:focus {
+    background-color: #11283a;
+    box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
 }
 label {
     font-weight: bolder;
 }
 select {
+    cursor: pointer;
     color: white;
-    width: 15vw;
+    width: 300px;
     background-color: #098baf;
     border-radius: 10px;
     border: none;
@@ -48,4 +53,8 @@ select {
     padding: 5px;
     font-size: 15px;
     font-weight: bold;
+}
+select:focus {
+    background-color: #11283a;
+    box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
 }

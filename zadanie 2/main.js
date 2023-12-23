@@ -6,20 +6,8 @@ function gatunek() {
 
         hideAllSelects()
 
-        if (animalType.value === `pies`){
-            createSection(dependencyArray)
-        }
-        if (animalType.value === `kot`){
-            createSection(dependencyArray)
-        }
-        if (animalType.value === `papuga`){
-            createSection(dependencyArray)
-        }
-        if (animalType.value === `jaszczurka`){
-            createSection(dependencyArray)
-        }
-        if (animalType.value === `zolw`){
-            createSection(dependencyArray)
+        if (dependencyArray.length > 0) {
+            createSection(dependencyArray);
         }
     })
 }
@@ -27,6 +15,8 @@ function gatunek() {
 function createSection(optionsArray) {
     var section = document.createElement('select')
     var label = document.createElement('label')
+    
+
 
     for (let index = 0; index < optionsArray.length; index++) {
         var optionsElement = document.createElement('option')
@@ -53,15 +43,14 @@ function hideAllSelects() {
 
 function getDependencyArray(animalType) {
     var dependencyMap = {
-        'kot': ['cat1', 'cat2', 'cat3'],
-        'pies': ['dog1', 'dog2', 'dog3'],
-        'papuga': ['papuga1', 'papuga2', 'papuga3'],
-        'jaszczurka': ['lizard1', 'lizard2', 'lizard3'],
-        'zolw': ['turtle1', 'turtle2', 'turtle3'],
+        'pies': ['Owczarek niemiecki', 'Beagle', 'Golden Retriever'],
+        'kot': ['Pers', 'Maine Coon', 'Szkocki Fold'],
+        'papuga': ['Amazonka żółtogłowa', 'Kakadu różowy', 'Agapornis'],
+        'jaszczurka': ['Legwan zielony', 'Krótkoogonowy agama', 'Szklarniak'],
+        'zolw': ['Żółw grecki', 'Żółw skryty', 'Żółw wodny czerwonolicy']
     };
 
     return dependencyMap[animalType] || []
 }
-
 gatunek();
 
