@@ -25,7 +25,8 @@ function gatunek() {
 }
 
 function createSection(optionsArray) {
-    var section = document.createElement('select');
+    var section = document.createElement('select')
+    var label = document.createElement('label')
 
     for (let index = 0; index < optionsArray.length; index++) {
         var optionsElement = document.createElement('option')
@@ -35,12 +36,17 @@ function createSection(optionsArray) {
     }
 
     var article = document.querySelector('#select-container')
-    article.appendChild(section);
+    article.appendChild(label).innerHTML = 'Gatunek: <br>'
+    article.appendChild(section)
 }
 
 function hideAllSelects() {
-    var selects = document.querySelectorAll('#select-container select');
-    selects.forEach(function (select) {
+    var selects = document.querySelectorAll('#select-container select')
+    var label = document.querySelectorAll('#select-container label')
+    selects.forEach((select)=> {
+        select.remove()   
+    });
+    label.forEach((select)=> {
         select.remove()   
     });
 }
@@ -54,7 +60,7 @@ function getDependencyArray(animalType) {
         'zolw': ['turtle1', 'turtle2', 'turtle3'],
     };
 
-    return dependencyMap[animalType] || [];
+    return dependencyMap[animalType] || []
 }
 
 gatunek();
