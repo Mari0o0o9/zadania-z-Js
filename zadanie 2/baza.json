@@ -1,0 +1,19 @@
+{
+    "pies":
+        [
+            {
+                "name": "puszek",
+                "animalType": "pies",
+                "gatunek": "Beagle"
+            }
+        ],
+
+    "kot": 
+        [
+           {
+                "name": "okruszek",
+                "animalType": "kot",
+                "gatunek": "Pers"
+           } 
+        ]  
+}

@@ -23,7 +23,19 @@ article {
     width: 45%;
 }
 
-input {
+#send {
+    cursor: pointer;
+    color: white;
+    width: 300px;
+    background-color: #098baf;
+    border-radius: 10px;
+    border: none;
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#imie {
     color: white;
     text-align: right;
     width: 300px;
