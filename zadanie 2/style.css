@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #283152;
+    background-color: #11283a;
     color: white;
 }
 
@@ -16,14 +16,15 @@ section {
     width: 100%;
 }
 article {
-    background-color: #52426e;
+    background-color: #0d526f;
+    box-shadow: black;
     padding: 0px 10px 5px 10px;
     border-radius: 10px;
     width: 45%;
 }
 
 input {
-    background-color: #e17db7;
+    background-color: #098baf;
     border-radius: 10px;
     border: none;
     margin: 5px 0px 0px 0px;
@@ -35,7 +36,7 @@ label {
     font-weight: bolder;
 }
 select {
-    background-color: #e17db7;
+    background-color: #098baf;
     border-radius: 10px;
     border: none;
     margin: 5px 0px 0px 0px;
