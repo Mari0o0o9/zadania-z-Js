@@ -65,7 +65,7 @@ function sendData(button) {
     var xhr = new XMLHttpRequest()
 
     var rodzaj = document.querySelector('#animalType').value
-    var gatunek = document.querySelector('#gatunek')
+    var gatunek = document.querySelector('#gatunek').value
     
     button.addEventListener("click", ()=> {
         let formData = new FormData(document.getElementById('myForm'))
@@ -76,7 +76,7 @@ function sendData(button) {
                 let text = ''
 
                 console.log(rodzaj);
-                console.log(gatunek.value);
+                console.log(gatunek);
             }
         }
 
