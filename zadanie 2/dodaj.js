@@ -3,7 +3,7 @@ function gatunek() {
     var send = document.getElementById('send')
 
     sendData(send)
-    
+
     animalType.addEventListener(`change`, ()=> {
         var selectedValue = animalType.value
         var dependencyArray = getDependencyArray(selectedValue)
@@ -64,26 +64,19 @@ gatunek()
 
 function sendData(button) {
     var xhr = new XMLHttpRequest()
-
-    var imie = document.querySelector('#imie').value
-    var rodzaj = document.querySelector('#animalType').value
-    var gatunek = document.querySelector('#gatunek')
     
     button.addEventListener("click", ()=> {
         let formData = new FormData(document.getElementById('myForm'))
         
         xhr.onreadystatechange = ()=> {
-            if (xhr.readyState == 4 && xhr.status == 200) {
+            if (xhr.readyState == 4 && xhr.status == 200) { 
                 let res = JSON.parse(xhr.responseText)
                 let text = ''
 
-                console.log(imie)
-                console.log(rodzaj);
-                console.log(gatunek);
+
             }
         }
-
-        xhr.open("POST", 'baza.json', true)
+        xhr.open("GET", 'baza.json', true)
         xhr.send(formData)
     })
 }
