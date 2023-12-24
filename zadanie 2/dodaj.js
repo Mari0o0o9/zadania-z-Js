@@ -60,23 +60,27 @@ function getDependencyArray(animalType) {
 }
 gatunek()
 
+
 function sendData(button) {
     var xhr = new XMLHttpRequest()
-    var url = 'index.html'
 
     var rodzaj = document.querySelector('#animalType').value
     var gatunek = document.querySelector('#gatunek')
     
     button.addEventListener("click", ()=> {
-        var formData = new FormData(document.getElementById('myForm'))
-
-        xhr.open("POST", url, true)
+        let formData = new FormData(document.getElementById('myForm'))
+        
         xhr.onreadystatechange = ()=> {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(rodzaj)
-                console.log(gatunek.value)
+                let res = JSON.parse(xhr.responseText)
+                let text = ''
+
+                console.log(rodzaj);
+                console.log(gatunek.value);
             }
         }
+
+        xhr.open("POST", 'baza.json', true)
         xhr.send(formData)
     })
 }

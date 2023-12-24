@@ -35,6 +35,14 @@ article {
     font-size: 15px;
     font-weight: bold;
 }
+#send:hover {
+    background-color: #11283a;
+    box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
+}
+#send:active {
+    box-shadow: inset 8px 8px 24px 0px rgb(14, 14, 15);
+}
+
 #imie {
     color: white;
     text-align: right;
@@ -47,7 +55,7 @@ article {
     font-size: 15px;
     font-weight: bold;
 }
-input:focus {
+#imie:focus {
     background-color: #11283a;
     box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
 }
