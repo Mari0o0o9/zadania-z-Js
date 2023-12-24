@@ -2,6 +2,8 @@ function gatunek() {
     var animalType = document.getElementById(`animalType`)
     var send = document.getElementById('send')
 
+    sendData(send)
+    
     animalType.addEventListener(`change`, ()=> {
         var selectedValue = animalType.value
         var dependencyArray = getDependencyArray(selectedValue)
@@ -12,7 +14,6 @@ function gatunek() {
             createSection(dependencyArray);
         }
     })
-    sendData(send)
 }
 
 function createSection(optionsArray) {
@@ -64,8 +65,9 @@ gatunek()
 function sendData(button) {
     var xhr = new XMLHttpRequest()
 
+    var imie = document.querySelector('#imie').value
     var rodzaj = document.querySelector('#animalType').value
-    var gatunek = document.querySelector('#gatunek').value
+    var gatunek = document.querySelector('#gatunek')
     
     button.addEventListener("click", ()=> {
         let formData = new FormData(document.getElementById('myForm'))
@@ -75,6 +77,7 @@ function sendData(button) {
                 let res = JSON.parse(xhr.responseText)
                 let text = ''
 
+                console.log(imie)
                 console.log(rodzaj);
                 console.log(gatunek);
             }

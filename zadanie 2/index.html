@@ -17,15 +17,15 @@
             <h2>Oddaj zwierzę do schroniska</h2>
             <form id="myForm">
                 <label for="imie">Imie zwierzaka:</label> <br>
-                <input type="text" id="imie"> <br>
+                <input type="text" id="imie" required> <br>
 
                 <label for="animalType">Rodzaj zwierzaka:</label> <br>
                 <select id="animalType">
-                    <option value="pies" id="pies" data-rodzaj="Psa" class="rodzaj">Pies</option>
-                    <option value="kot" id="kot" data-rodzaj="Kota" class="rodzaj">Kot</option>
-                    <option value="papuga" id="papuga" data-rodzaj="Papugi" class="rodzaj">Papuga</option>
-                    <option value="jaszczurka" id="jaszczurka" data-rodzaj="Jaszczurki" class="rodzaj">Jaszczurka</option>
-                    <option value="zolw" id="zolw" data-rodzaj="Żółwia" class="rodzaj">Żółw</option>
+                    <option value="pies" id="pies" class="rodzaj">Pies</option>
+                    <option value="kot" id="kot" class="rodzaj">Kot</option>
+                    <option value="papuga" id="papuga" class="rodzaj">Papuga</option>
+                    <option value="jaszczurka" id="jaszczurka" class="rodzaj">Jaszczurka</option>
+                    <option value="zolw" id="zolw" class="rodzaj">Żółw</option>
                 </select> <br>
                 <div id="select-container"></div>
                 <input type="button" value="Oddaj zwierze do Schroniska" id="send">
