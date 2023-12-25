@@ -14,7 +14,10 @@ function gatunek() {
             createSection(dependencyArray);
         }
     })
+
+    
 }
+gatunek()
 
 function createSection(optionsArray) {
     var section = document.createElement('select')
@@ -35,19 +38,6 @@ function createSection(optionsArray) {
     article.appendChild(section)
 }
 
-function hideAllSelects() {
-    var selects = document.querySelectorAll('#select-container select')
-    var label = document.querySelectorAll('#select-container label')
-
-    selects.forEach((select)=> {
-        select.remove()   
-    })
-
-    label.forEach((select)=> {
-        select.remove()   
-    })
-}
-
 function getDependencyArray(animalType) {
     var dependencyMap = {
         'pies': ['Owczarek niemiecki', 'Beagle', 'Golden Retriever'],
@@ -59,25 +49,17 @@ function getDependencyArray(animalType) {
 
     return dependencyMap[animalType] || []
 }
-gatunek()
 
+function hideAllSelects() {
+    var selects = document.querySelectorAll('#select-container select')
+    var label = document.querySelectorAll('#select-container label')
 
-function sendData(button) {
-    var xhr = new XMLHttpRequest()
-    
-    button.addEventListener("click", ()=> {
-        let formData = new FormData(document.getElementById('myForm'))
-        
-        xhr.onreadystatechange = ()=> {
-            if (xhr.readyState == 4 && xhr.status == 200) { 
-                let res = JSON.parse(xhr.responseText)
-                let text = ''
+    selects.forEach((select)=> {
+        select.remove()   
+    })
 
-
-            }
-        }
-        xhr.open("GET", 'baza.json', true)
-        xhr.send(formData)
+    label.forEach((select)=> {
+        select.remove()   
     })
 }
 
