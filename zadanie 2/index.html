@@ -14,25 +14,25 @@
     </header>
     <section>
         <article>
-            <h2>Oddaj zwierzę do schroniska</h2>
-            <form id="myForm">
-                <label for="imie">Imie zwierzaka:</label> <br>
-                <input type="text" id="imie" required> <br>
+            <h2>zgłoś do adopcji</h2>
+            <label for="imie">Imie zwierzaka:</label> <br>
+            <input type="text" id="imie" placeholder="Podaj imie zwierzaka" required> <br>
 
-                <label for="animalType">Rodzaj zwierzaka:</label> <br>
-                <select id="animalType">
-                    <option value="pies" id="pies" class="rodzaj">Pies</option>
-                    <option value="kot" id="kot" class="rodzaj">Kot</option>
-                    <option value="papuga" id="papuga" class="rodzaj">Papuga</option>
-                    <option value="jaszczurka" id="jaszczurka" class="rodzaj">Jaszczurka</option>
-                    <option value="zolw" id="zolw" class="rodzaj">Żółw</option>
-                </select> <br>
-                <div id="select-container"></div>
-                <input type="button" value="Oddaj zwierze do Schroniska" id="send">
-            </form> 
+            <label for="animalType">Gatunek zwierzaka:</label> <br>
+            <select id="animalType" required>
+                <option value="" disabled selected>Wybierz gatunek zwierzątka</option>
+                <option value="Pies" class="rodzaj">Pies</option>
+                <option value="Kot" class="rodzaj">Kot</option>
+                <option value="Papuga" class="rodzaj">Papuga</option>
+                <option value="Jaszczurka" class="rodzaj">Jaszczurka</option>
+                <option value="Żółw" class="rodzaj">Żółw</option>
+            </select> <br>
+            <label for="rasa" class="rasa">Rasa zwierzaka:</label>
+            <input type="text" id="rasa" class="rasa" placeholder="Podaj rase zwierzaka">
+            <input type="button" value="Oddaj zwierze do Schroniska" id="send">
             <h2>i zajecia dla nich</h2>
         </article>
-        <article>
+        <article id="displayDiv">
             <h2>zwierzeta do adopcji</h2>
         </article>
     </section>

@@ -1,66 +1,58 @@
 function gatunek() {
     var animalType = document.getElementById(`animalType`)
+    var imie = document.getElementById('imie')
+    var inputRasa = document.querySelectorAll('.rasa')
+    var rasa = document.querySelector('#rasa')
     var send = document.getElementById('send')
-
-    sendData(send)
-
+    
     animalType.addEventListener(`change`, ()=> {
-        var selectedValue = animalType.value
-        var dependencyArray = getDependencyArray(selectedValue)
+        inputRasa.forEach(element => {
+            element.style.display = 'flex'
+        });
+    })
 
-        hideAllSelects()
-
-        if (dependencyArray.length > 0) {
-            createSection(dependencyArray);
+    
+    send.addEventListener('click', ()=> {
+        if (imie.value == '' || rasa.value == '') {
+            alert('Wypełnij wszytskie pola')
+        }
+        else {
+            saveFormData()
         }
     })
 
-    
 }
 gatunek()
 
-function createSection(optionsArray) {
-    var section = document.createElement('select')
-    section.setAttribute('id', 'gatunek')
 
-    var label = document.createElement('label')
-    
-    for (let index = 0; index < optionsArray.length; index++) {
-        var optionsElement = document.createElement('option')
-        optionsElement.value = optionsArray[index]
-        optionsElement.text = optionsArray[index]
-        section.appendChild(optionsElement)
+function saveFormData() {
+    var imie = document.querySelector('#imie')
+    var gatunek = document.querySelector('#animalType')
+    var rasa = document.querySelector('#rasa')
+
+    var formData = {
+        'imie': imie.value,
+        'gatunek': gatunek.value,
+        'rasa': rasa.value
     }
 
-    var article = document.querySelector('#select-container')
+    var jsonString = JSON.stringify(formData)
 
-    article.appendChild(label).innerHTML = 'Gatunek: <br>'
-    article.appendChild(section)
+    localStorage.setItem('formData', jsonString)
+
+    displayFormData(formData)
 }
 
-function getDependencyArray(animalType) {
-    var dependencyMap = {
-        'pies': ['Owczarek niemiecki', 'Beagle', 'Golden Retriever'],
-        'kot': ['Pers', 'Maine Coon', 'Szkocki Fold'],
-        'papuga': ['Amazonka żółtogłowa', 'Kakadu różowy', 'Agapornis'],
-        'jaszczurka': ['Legwan zielony', 'Krótkoogonowy agama', 'Szklarniak'],
-        'zolw': ['Żółw grecki', 'Żółw skryty', 'Żółw wodny czerwonolicy']
-    };
+function displayFormData(formData) {
+    var displayDiv = document.querySelector('#displayDiv')
 
-    return dependencyMap[animalType] || []
+    displayDiv.innerHTML =  '<div>Imie: '  
+                            +'<p>' + formData.imie + '</p>'+
+                            +'<p>' + formData.gatunek + '</p>'+
+                            +'<p>' + formData.rasa + '</p>'+
+                            '</div>'
 }
 
-function hideAllSelects() {
-    var selects = document.querySelectorAll('#select-container select')
-    var label = document.querySelectorAll('#select-container label')
 
-    selects.forEach((select)=> {
-        select.remove()   
-    })
-
-    label.forEach((select)=> {
-        select.remove()   
-    })
-}
 
 

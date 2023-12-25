@@ -43,9 +43,14 @@ article {
     box-shadow: inset 8px 8px 24px 0px rgb(14, 14, 15);
 }
 
+#imie::placeholder {
+    color: black;
+}
+#imie:focus::placeholder {
+    color: white;
+}
 #imie {
     color: white;
-    text-align: right;
     width: 300px;
     background-color: #098baf;
     border-radius: 10px;
@@ -59,6 +64,34 @@ article {
     background-color: #11283a;
     box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
 }
+
+
+.rasa {
+    display: none;
+}
+
+#rasa::placeholder {
+    color: black;
+}
+#rasa:focus::placeholder {
+    color: white;
+}
+#rasa {
+    color: white;
+    width: 300px;
+    background-color: #098baf;
+    border-radius: 10px;
+    border: none;
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#rasa:focus {
+    background-color: #11283a;
+    box-shadow: 8px 8px 24px 0px rgb(14, 14, 15);
+}
+
 label {
     font-weight: bolder;
 }
@@ -73,6 +106,9 @@ select {
     padding: 5px;
     font-size: 15px;
     font-weight: bold;
+
+    appearance: none;
+    
 }
 select:focus {
     background-color: #11283a;
